@@ -8,44 +8,44 @@ namespace Nez
 	public static class EffectResource
 	{
 		// sprite effects
-		internal static byte[] spriteBlinkEffectBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteBlinkEffect.mgfxo" ); } }
-		internal static byte[] spriteLinesEffectBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteLines.mgfxo" ); } }
-		internal static byte[] spriteAlphaTestBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteAlphaTest.mgfxo" ); } }
-		internal static byte[] crosshatchBytes { get { return getFileResourceBytes( "Content/nez/effects/Crosshatch.mgfxo" ); } }
-		internal static byte[] noiseBytes { get { return getFileResourceBytes( "Content/nez/effects/Noise.mgfxo" ); } }
-		internal static byte[] twistBytes { get { return getFileResourceBytes( "Content/nez/effects/Twist.mgfxo" ); } }
-		internal static byte[] dotsBytes { get { return getFileResourceBytes( "Content/nez/effects/Dots.mgfxo" ); } }
-		internal static byte[] dissolveBytes { get { return getFileResourceBytes( "Content/nez/effects/Dissolve.mgfxo" ); } }
+		internal static byte[] spriteBlinkEffectBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteBlinkEffect" ); } }
+		internal static byte[] spriteLinesEffectBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteLines" ); } }
+		internal static byte[] spriteAlphaTestBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteAlphaTest" ); } }
+		internal static byte[] crosshatchBytes { get { return getFileResourceBytes( "Content/nez/effects/Crosshatch" ); } }
+		internal static byte[] noiseBytes { get { return getFileResourceBytes( "Content/nez/effects/Noise" ); } }
+		internal static byte[] twistBytes { get { return getFileResourceBytes( "Content/nez/effects/Twist" ); } }
+		internal static byte[] dotsBytes { get { return getFileResourceBytes( "Content/nez/effects/Dots" ); } }
+		internal static byte[] dissolveBytes { get { return getFileResourceBytes( "Content/nez/effects/Dissolve" ); } }
 
 		// post processor effects
-		internal static byte[] bloomCombineBytes { get { return getFileResourceBytes( "Content/nez/effects/BloomCombine.mgfxo" ); } }
-		internal static byte[] bloomExtractBytes { get { return getFileResourceBytes( "Content/nez/effects/BloomExtract.mgfxo" ); } }
-		internal static byte[] gaussianBlurBytes { get { return getFileResourceBytes( "Content/nez/effects/GaussianBlur.mgfxo" ); } }
-		internal static byte[] vignetteBytes { get { return getFileResourceBytes( "Content/nez/effects/Vignette.mgfxo" ); } }
-		internal static byte[] letterboxBytes { get { return getFileResourceBytes( "Content/nez/effects/Letterbox.mgfxo" ); } }
-		internal static byte[] heatDistortionBytes { get { return getFileResourceBytes( "Content/nez/effects/HeatDistortion.mgfxo" ); } }
-		internal static byte[] spriteLightMultiplyBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteLightMultiply.mgfxo" ); } }
-		internal static byte[] pixelGlitchBytes { get { return getFileResourceBytes( "Content/nez/effects/PixelGlitch.mgfxo" ); } }
+		internal static byte[] bloomCombineBytes { get { return getFileResourceBytes( "Content/nez/effects/BloomCombine" ); } }
+		internal static byte[] bloomExtractBytes { get { return getFileResourceBytes( "Content/nez/effects/BloomExtract" ); } }
+		internal static byte[] gaussianBlurBytes { get { return getFileResourceBytes( "Content/nez/effects/GaussianBlur" ); } }
+		internal static byte[] vignetteBytes { get { return getFileResourceBytes( "Content/nez/effects/Vignette" ); } }
+		internal static byte[] letterboxBytes { get { return getFileResourceBytes( "Content/nez/effects/Letterbox" ); } }
+		internal static byte[] heatDistortionBytes { get { return getFileResourceBytes( "Content/nez/effects/HeatDistortion" ); } }
+		internal static byte[] spriteLightMultiplyBytes { get { return getFileResourceBytes( "Content/nez/effects/SpriteLightMultiply" ); } }
+		internal static byte[] pixelGlitchBytes { get { return getFileResourceBytes( "Content/nez/effects/PixelGlitch" ); } }
 
 		// deferred lighting
-		internal static byte[] deferredSpriteBytes { get { return getFileResourceBytes( "Content/nez/effects/DeferredSprite.mgfxo" ); } }
-		internal static byte[] deferredLightBytes { get { return getFileResourceBytes( "Content/nez/effects/DeferredLighting.mgfxo" ); } }
+		internal static byte[] deferredSpriteBytes { get { return getFileResourceBytes( "Content/nez/effects/DeferredSprite" ); } }
+		internal static byte[] deferredLightBytes { get { return getFileResourceBytes( "Content/nez/effects/DeferredLighting" ); } }
 
 		// forward lighting
-		internal static byte[] forwardLightingBytes { get { return getFileResourceBytes( "Content/nez/effects/ForwardLighting.mgfxo" ); } }
-		internal static byte[] polygonLightBytes { get { return getFileResourceBytes( "Content/nez/effects/PolygonLight.mgfxo" ); } }
+		internal static byte[] forwardLightingBytes { get { return getFileResourceBytes( "Content/nez/effects/ForwardLighting" ); } }
+		internal static byte[] polygonLightBytes { get { return getFileResourceBytes( "Content/nez/effects/PolygonLight" ); } }
 
 		// scene transitions
-		internal static byte[] squaresTransitionBytes { get { return getFileResourceBytes( "Content/nez/effects/transitions/Squares.mgfxo" ); } }
+		internal static byte[] squaresTransitionBytes { get { return getFileResourceBytes( "Content/nez/effects/transitions/Squares" ); } }
 
 		// sprite or post processor effects
 		internal static byte[] spriteEffectBytes { get { return getMonoGameEmbeddedResourceBytes( "Microsoft.Xna.Framework.Graphics.Effect.Resources.SpriteEffect.ogl.mgfxo" ); } }
-		internal static byte[] multiTextureOverlayBytes { get { return getFileResourceBytes( "Content/nez/effects/MultiTextureOverlay.mgfxo" ); } }
-		internal static byte[] scanlinesBytes { get { return getFileResourceBytes( "Content/nez/effects/Scanlines.mgfxo" ); } }
-		internal static byte[] reflectionBytes { get { return getFileResourceBytes( "Content/nez/effects/Reflection.mgfxo" ); } }
-		internal static byte[] grayscaleBytes { get { return getFileResourceBytes( "Content/nez/effects/Grayscale.mgfxo" ); } }
-		internal static byte[] sepiaBytes { get { return getFileResourceBytes( "Content/nez/effects/Sepia.mgfxo" ); } }
-		internal static byte[] paletteCyclerBytes { get { return getFileResourceBytes( "Content/nez/effects/PaletteCycler.mgfxo" ); } }
+		internal static byte[] multiTextureOverlayBytes { get { return getFileResourceBytes( "Content/nez/effects/MultiTextureOverlay" ); } }
+		internal static byte[] scanlinesBytes { get { return getFileResourceBytes( "Content/nez/effects/Scanlines" ); } }
+		internal static byte[] reflectionBytes { get { return getFileResourceBytes( "Content/nez/effects/Reflection" ); } }
+		internal static byte[] grayscaleBytes { get { return getFileResourceBytes( "Content/nez/effects/Grayscale" ); } }
+		internal static byte[] sepiaBytes { get { return getFileResourceBytes( "Content/nez/effects/Sepia" ); } }
+		internal static byte[] paletteCyclerBytes { get { return getFileResourceBytes( "Content/nez/effects/PaletteCycler" ); } }
 
 
 		/// <summary>
