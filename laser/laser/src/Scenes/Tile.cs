@@ -30,10 +30,10 @@ namespace laser.Scenes
             switch (State)
             {
                 case CellState.Path:
-                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Gray)));
+                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Gray)).setRenderLayer(50));
                     break;
                 case CellState.Start:
-                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Yellow)));
+                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Yellow)).setRenderLayer(50));
                     entity.scene.entities.findEntity("player").transform.position =
                         Offset + new Vector2(X * 16 * 2, Y * 16 * 2);
                     var player = entity.scene.entities.findEntity("player").getComponent<Player>();
@@ -41,7 +41,7 @@ namespace laser.Scenes
                     player.Y = Y;
                     break;
                 case CellState.End:
-                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Green)));
+                    entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Green)).setRenderLayer(50));
                     break;
                 case CellState.Other:
                     //entity.addComponent(new Sprite(Graphics.createSingleColorTexture(16, 16, Color.Red)));

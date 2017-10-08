@@ -22,12 +22,12 @@ namespace laser.Scenes
             setDesignResolution(1280, 720, SceneResolutionPolicy.None);
             Screen.setSize(1280,720);
 
+            var player = this.createEntity("player", new Vector2(Screen.width / 2, Screen.height / 2));
+            player.addComponent(new Player());
+
             GetStageData(stagePath);
 
             CreateStage();
-
-            var player = this.createEntity("player", new Vector2(Screen.width / 2, Screen.height / 2));
-            player.addComponent(new Player());
 
         }
 
@@ -97,6 +97,55 @@ namespace laser.Scenes
                 {
                     var cell = createEntity("CellX" + i + "Y" + j);
                     cell.addComponent(new Tile(i, j, new Vector2(100, 100), mc[i,j].State));
+                }
+            }
+
+            var td = StageData.TowerData;
+
+            for (var i = 0; i < td[0]; i++)
+            {
+                var tower = createEntity("Tower0-" + i);
+                tower.addComponent(new Tower(0));
+            }
+            for (var i = 0; i < td[1]; i++)
+            {
+                var tower = createEntity("Tower1-" + i);
+                tower.addComponent(new Tower(1));
+            }
+            for (var i = 0; i < td[2]; i++)
+            {
+                var tower = createEntity("Tower2-" + i);
+                tower.addComponent(new Tower(2));
+            }
+
+            findEntity("player").getComponent<Player>().AddTowers();
+
+            var ld = StageData.LaserDatas;
+
+            for (var i = 0; i < 21; i++)
+            {
+                for (var j = 0; j < 15; j++)
+                {
+                    if (ld[i, j].IsLaser0 || ld[i, j].IsLaser1 || ld[i, j].IsLaser3)
+                    {
+                        if (ld[i, j].IsLaser0)
+                        {
+                            var laser1 = createEntity("Laser1X" + i + "Y" + j);
+                            laser1.addComponent(new Laser(i, j, true));
+                        }
+                        if (ld[i, j].IsLaser1)
+                        {
+                            var laser2 = createEntity("Laser2X" + i + "Y" + j);
+                            laser2.addComponent(new Laser(i, j, true));
+                        }
+                        if (ld[i, j].IsLaser3)
+                        {
+
+                            var laser3 = createEntity("Laser3X" + i + "Y" + j);
+                            laser3.addComponent(new Laser(i, j, true));
+                        }
+
+                    }
                 }
             }
         }

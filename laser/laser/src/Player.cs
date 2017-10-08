@@ -45,6 +45,9 @@ namespace laser
         public int X;
         public int Y;
 
+        private List<Tower> towerList = new List<Tower>();
+        private Animations looking = Animations.WalkDown;
+
         public override void onAddedToEntity()
         {
             base.onAddedToEntity();
@@ -76,6 +79,7 @@ namespace laser
                 subtextures[7]
             }));
 
+            entity.getComponent<Sprite>().setRenderLayer(0);
             setupInput();
         }
 
@@ -140,14 +144,26 @@ namespace laser
             var animation = Animations.WalkDown;
 
             if (move.X < 0)
+            {
                 animation = Animations.WalkLeft;
+                looking = Animations.WalkLeft;
+            }
             else if (move.X > 0)
+            {
                 animation = Animations.WalkRight;
+                looking = Animations.WalkRight;
+            }
 
             if (move.Y < 0)
+            {
                 animation = Animations.WalkUp;
+                looking = Animations.WalkUp;
+            }
             else if (move.Y > 0)
+            {
                 animation = Animations.WalkDown;
+                looking = Animations.WalkDown;
+            }
 
             if (move != Vector2.Zero)
             {
@@ -195,6 +211,11 @@ namespace laser
             {
                 _animation.stop();
             }
+
+            if (_actionButton.isPressed)
+            {
+                
+            }
         }
 
         private void move()
@@ -203,6 +224,7 @@ namespace laser
             {
                 dir.Normalize();
                 entity.transform.position += dir * 4;
+                //entity.transform.position += dir * 2;
                 count++;
             }
             else
@@ -211,6 +233,12 @@ namespace laser
                 moving = false;
                 dir = Vector2.Zero;
             }
+        }
+
+        public void AddTowers()
+        {
+            var towers = entity.scene.entities.findComponentsOfType<Tower>();
+            towerList.AddRange(towers);
         }
     }
 }

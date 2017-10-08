@@ -40,12 +40,12 @@ namespace Editor.Scenes
         public override void onAddedToEntity()
         {
             base.onAddedToEntity();
-            if (entity.name.Contains('1'))
+            if (entity.name.Contains("Laser1"))
             {
                 Type = 1;
                 color = Color.Red;
             }
-            else if (entity.name.Contains('2'))
+            else if (entity.name.Contains("Laser2"))
             {
                 Type = 2;
                 color = Color.Green;
