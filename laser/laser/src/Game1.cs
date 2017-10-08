@@ -15,7 +15,7 @@ namespace laser
         {
             base.Initialize();
 
-            var gScene = new GameScene("test.json");
+            var gScene = new GameScene("stage1.json");
             scene = gScene;
         }
 
